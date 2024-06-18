@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="javatest.CameraController">
+    <top>
+        <VBox spacing="10" padding="10">
+            <HBox spacing="10">
+                <Label text="Area Code:"/>
+                <ComboBox fx:id="areaCodeComboBox" onAction="#applyFilter"/>
+            </HBox>
+            <HBox spacing="10">
+                <Label fx:id="numOfStudentsLabel" text="Number of Students:"/>
+            </HBox>
+        </VBox>
+    </top>
+    <center>
+        <TableView fx:id="studentTableView">
+            <columns>
+                <TableColumn text="Student Number" fx:id="studentNumberColumn"/>
+                <TableColumn text="First Name" fx:id="firstNameColumn"/>
+                <TableColumn text="Last Name" fx:id="lastNameColumn"/>
+                <TableColumn text="Telephone" fx:id="telephoneColumn"/>
+                <TableColumn text="Address" fx:id="addressColumn"/>
+                <TableColumn text="Province" fx:id="provinceColumn"/>
+                <TableColumn text="Average Grade" fx:id="averageGradeColumn"/>
+                <TableColumn text="Major" fx:id="majorColumn"/>
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>
